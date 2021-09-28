@@ -1,22 +1,14 @@
-let generatePin = document.querySelector(".generate-btn");
-let showClickValue = document.getElementById('screen').value;
-let  buttons = document.querySelectorAll(".button");
-let showRandomNumber = document.getElementById('show-random-number').value;
+var generatePin = document.querySelector(".generate-btn");
+var showClickValue = document.getElementById('screen').value;
+var  buttons = document.querySelectorAll(".button");
+var showRandomNumber = document.getElementById('show-random-number').value;
 var notifyError = document.querySelector('.notify-error');
 var notifySuccess = document.querySelector('.notify-success');
-
-
-
-
-
-
 
 generatePin.addEventListener('click',function(){
    rendomNumber = Math.floor(1000 + Math.random() * 9000) ;  
     document.getElementById('show-random-number').value = rendomNumber;
 });
-
-
 
 for(item of buttons){
     item.addEventListener('click',function(e){
@@ -32,8 +24,6 @@ clearButton.addEventListener('click',function(){
     notifySuccess.style.display ="none";
     notifyError.style.display ="none";
 });
-
-
 
 submitBtn = document.querySelector('.submit-btn');
 
